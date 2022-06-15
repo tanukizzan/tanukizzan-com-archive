@@ -1,19 +1,18 @@
-import { client } from '../../libs/client'
 import type { Article } from '../../types/article'
 import Link from 'next/link'
 
 type Props = {
-  articles: Array<Article>
+  articles?: Array<Article>
 }
 
 export default function ArticlesList({ articles }: Props) {
   return (
     <div className="articles-list">
-      <h2 className="mx-auto my-8 text-3xl font-bold">
+      <h2 className="home-h2">
         Blog
       </h2>
       <div className="mx-auto my-8 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5">
-        {articles.map(article => (
+        {articles && articles.map(article => (
           <Link href={`/posts/${article.id}`} passHref>
             <div className="rounded overflow-hidden shadow-lg cursor-pointer" key={article.id}>
               <img
@@ -38,11 +37,3 @@ export default function ArticlesList({ articles }: Props) {
   )
 }
 
-export const getServerSideProps = async () => {
-  const data = await client.get({ endpoint: 'articles' })
-  return {
-    props: {
-      articles: data.contents,
-    }
-  }
-}

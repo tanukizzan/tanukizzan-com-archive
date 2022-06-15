@@ -45,8 +45,6 @@ export default function Profile() {
           )).reduce((prev: JSX.Element, current: JSX.Element): any => [prev, (<span className="paragraph mx-2">/</span>), current])
         }
       </nav>
-      <h2 className="home-h2">Works</h2>
-
     </div>
   )
 }

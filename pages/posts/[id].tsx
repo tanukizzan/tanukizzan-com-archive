@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import { GetServerSideProps } from 'next';
 import type { Article } from '../../types/article';
 import { client } from '../../libs/client';
@@ -9,6 +10,9 @@ type Props = {
 export default function Article({ article }: Props) {
   return (
     <>
+    <Head>
+      <title>{article.title} | tanukizzan</title>
+    </Head>
       <div className="w-4/5 max-w-3xl mx-auto">
         <div className="max-w-6xl mx-auto">
           <img

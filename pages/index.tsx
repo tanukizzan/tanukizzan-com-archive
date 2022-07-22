@@ -1,16 +1,17 @@
-// TODO 記事ページのCSSをつくる（micorCMSのエディタ風のシンプルデザイン）
-
 import Head from 'next/head'
 import { client } from '../libs/client'
 import Profile from './profile/profile'
 import type { Article } from '../types/article'
+import type { Category } from '../types/category'
 import ArticlesList from './articles-list/articles-list'
+import CategoriesList from './categories-list/categories-list'
 
 type Props = {
   articles?: Array<Article>
+  categories?: Array<Category>
 }
 
-export default function Home({ articles }: Props) {
+export default function Home({ articles, categories }: Props) {
   return (
     <main className="w-4/5 mx-auto flex-grow">
       <Head>
@@ -25,10 +26,12 @@ export default function Home({ articles }: Props) {
 }
 
 export const getStaticProps = async () => {
-  const data = await client.get({ endpoint: 'articles' })
+  const data = await client.get({ endpoint: 'articles' });
+  const categoryData = await client.get({ endpoint: "categories" });
   return {
     props: {
       articles: data.contents,
+      categories: categoryData.contents,
     }
   }
 }

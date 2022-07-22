@@ -11,6 +11,8 @@ export type Article = {
     height: number
     width: number
   }
-  tag: string
-  date: string
+  description: string
+  category: {
+    name: string
+  }
 }

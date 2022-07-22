@@ -1,0 +1,17 @@
+.card {
+  cursor: pointer;
+}
+.cardImg {
+  position: relative;
+  border-radius: 12px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  padding: 6px;
+  background-color: #000000;
+}
+.cardImg img {
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 3 / 2;
+  border-radius: 6px;
+}

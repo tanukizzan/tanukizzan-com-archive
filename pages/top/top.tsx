@@ -6,7 +6,7 @@ export default function Top() {
       <div className="padBtn"></div>
       <img alt="hero" src="/images/gadgets.jpg" className={styles.padImg} />
       <div className={styles.topText}>
-        <h1>Tanukizzan's Blog</h1>
+        <h1>Welcome to tanukizzan.com!</h1>
         <p>Technology / Gadget</p>
         <a href='https://app.tanukizzan.com' className="text-blue-500">About Me</a>
       </div>

@@ -23,9 +23,9 @@ export default function Article({ article }: Props) {
         <meta property="og:description" content={article.description} />
         <meta property="og:image" content={article.eye_catch.url} />
       </Head>
-      <div className={styles.pad}>
-        <div className={styles.padBtn}></div>
-        <img src={article.eye_catch.url} className={styles.padImg} />
+      <div className="pad w-3/5 max-w-2xl m-auto">
+        <div className="padBtn"></div>
+        <img src={article.eye_catch.url} className="padImg" />
       </div>
       <div className="w-4/5 max-w-3xl mx-auto">
         <div className="max-w-6xl mx-auto">

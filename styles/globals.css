@@ -59,14 +59,20 @@ body {
   height: 4px;
   background-color: black;
 }
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 520px) and (max-width: 960px) {
+  .pad {
+    width: 90%;
+    max-width: 600px;
+  }
+}
+@media screen and (max-width: 520px) {
   .pad {
     padding-right: 0;
     border-radius: 32px 0 0 32px;
     width: 95%;
     margin: 0 0 0 auto;
   }
-  .padImg {
+  .pad img {
     display: flex;
     border-radius: 16px 0 0 16px !important;
     overflow: hidden;

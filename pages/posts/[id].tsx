@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { GetServerSideProps } from 'next';
+import { GetStaticProps } from 'next';
 import type { Article } from '../../types/article';
 import { client } from '../../libs/client';
 import Date from '../../components/Date';
@@ -75,13 +75,17 @@ export default function Article({ article }: Props) {
   );
 }
 
-export const getServerSideProps: GetServerSideProps = async ctx => {
+export const getStaticPaths = async () => {
+  const data = await client.get({ endpoint: "articles" });
+
+  const paths = data.contents.map((content: any) => `/posts/${content.id}`);
+  return { paths, fallback: false };
+};
+
+export const getStaticProps: GetStaticProps = async ctx => {
   const id = ctx.params?.id;
   const idExceptArray = id instanceof Array ? id[0] : id;
-  const data = await client.get({
-    endpoint: 'articles',
-    contentId: idExceptArray,
-  });
+  const data = await client.get({ endpoint: "articles", contentId: idExceptArray });
 
   return {
     props: {

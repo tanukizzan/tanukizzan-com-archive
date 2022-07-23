@@ -1,0 +1,109 @@
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.category p {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  border-radius: 16px 0 16px 0;
+  margin: 1rem auto;
+}
+.category p span {margin-left: 4px;}
+.article h1 {
+  font-size: 2.5rem;
+  margin: 4rem auto 1rem auto;
+}
+.article h2 {
+  font-weight: bold;
+  font-size: 2rem;
+  margin: 3rem auto 1.5rem auto;
+  padding: 0.5rem 1rem;
+  border-top: 6px solid #111111;
+  border-bottom: 6px solid #111111;
+}
+.article h3 {
+  font-weight: bold;
+  font-size: 1.8rem;
+  margin: 2rem auto 1rem auto;
+}
+.article p {
+  line-height: 1.8;
+  margin: 1rem auto;
+}
+.article a {
+  @apply text-blue-600
+}
+.article a:hover {
+  text-decoration: underline;
+}
+.article img {
+  border-radius: 5px;
+  margin: 1.5rem auto;
+}
+.article blockquote {
+  background-color: #eeeeee;
+  border-radius: 5px;
+  padding: 1rem;
+  margin: 1.5rem auto;
+}
+.article pre {
+  background-color: #000022;
+  color: #ffffff;
+  border-radius: 5px;
+  padding: 1rem;
+  margin: 1.5rem auto;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.article iframe {
+  width: 100%;
+  border-radius: 5px;
+  margin: 1.5rem auto;
+}
+.article ol, .article ul {
+  padding-left: 2rem;
+}
+.article ol {
+  list-style-type: decimal;
+}
+.article ul {
+  list-style-type: square;
+}
+.article ol li, .article ul li {
+  line-height: 2;
+}
+.article code:not(.article pre code) {
+  background-color: #eeeeee;
+  padding: 2px;
+  border-radius: 2px;
+  word-break: break-all;
+}
+.shareText {
+  font-size: 2rem;
+  margin: 1rem auto;
+  text-align: center;
+}
+.shareBtn {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  margin: 2rem auto;
+}
+.shareBtn button {
+  margin: 0.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+  .article h2 {
+    font-size: 1.8rem;
+  }
+  .article h3 {
+    font-size: 1.5rem;
+  }
+}

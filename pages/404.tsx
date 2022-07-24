@@ -8,7 +8,7 @@ export default function Custom404() {
       <div className={styles.topText}>
         <h1>404 Not Found</h1>
         <p className="px-4">お探しのページは見つかりませんでした。</p>
-        <a href='/' className="text-blue-500">ホームに戻る</a>
+        <a href='/' className="text-blue-600">ホームに戻る</a>
       </div>
     </div>
   )

@@ -8,7 +8,7 @@ export default function Top() {
       <div className={styles.topText}>
         <h1>Welcome to tanukizzan.com!</h1>
         <p>Technology / Gadget</p>
-        <a href='https://app.tanukizzan.com' className="text-blue-500">About Me</a>
+        <a href='https://app.tanukizzan.com' className="text-blue-600">About Me</a>
       </div>
     </div>
   )

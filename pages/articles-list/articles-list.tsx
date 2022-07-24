@@ -20,19 +20,19 @@ export default function ArticlesList({ articles }: Props) {
           <Link href={`/posts/${article.id}`} passHref key={article.id}>
             <div className={styles.card}>
               <div className={styles.cardImg}>
-                <img src={article.eye_catch.url} />
+                <img src={article.eye_catch.url} alt={article.title} />
               </div>
               <div className={styles.cardText}>
                 <h3 className="p-4 pb-0 text-xl font-semibold">{article.title}</h3>
                 <div className="p-4 pt-2 flex flex-col">
                   {article.publishedAt && (
-                    <p className="flex items-center text-blue-500">
+                    <p className="flex items-center text-blue-600">
                       <BiTime />
                       <span className="ml-1"><Date dateString={article.publishedAt} /></span>
                     </p>
                   )}
                   {article.category && (
-                    <p className="flex items-center text-blue-500">
+                    <p className="flex items-center text-blue-600">
                       <BiCategory />
                       <span className="ml-1">{article.category.name}</span>
                     </p>

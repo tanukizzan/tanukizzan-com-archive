@@ -13,7 +13,7 @@ export default function ArticlesList({ articles }: Props) {
   return (
     <div className="articles-list">
       <h2 className="home-h2">
-        Recent Articles
+        Blog
       </h2>
       <div className="mx-auto my-8 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5">
         {articles && articles.map(article => (

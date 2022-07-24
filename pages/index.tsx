@@ -23,7 +23,7 @@ export default function Home({ articles, categories }: Props) {
         <meta property="og:url" content={`https://tanukizzan.com/`} />
         <meta property="og:title" content="Tanukizzan's Blog" />
         <meta property="og:description" content={description} />
-        <meta property="og:image" content="/images/gadgets.jpg" />
+        <meta property="og:image" content="https://tanukizzan.com/images/gadgets.jpg" />
       </Head>
       <Top />
       <main className="w-4/5 mx-auto flex-grow">

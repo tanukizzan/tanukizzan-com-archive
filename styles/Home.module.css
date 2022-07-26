@@ -50,7 +50,7 @@
 
 @media screen and (max-width: 520px) {
   .padImg {
-    aspect-ratio: 5/ 4 !important;
+    aspect-ratio: 5 / 4 !important;
   }
   .topText h1 {
     font-size: 1.8rem;

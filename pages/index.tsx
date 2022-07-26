@@ -1,10 +1,10 @@
 import Head from 'next/head'
 import { client } from '../libs/client'
-import Top from './top/top'
+import Top from '../components/top/top'
 import type { Article } from '../types/article'
 import type { Category } from '../types/category'
-import ArticlesList from './articles-list/articles-list'
-import CategoriesList from './categories-list/categories-list'
+import ArticlesList from '../components/articles-list/articles-list'
+import CategoriesList from '../components/categories-list/categories-list'
 
 type Props = {
   articles?: Array<Article>

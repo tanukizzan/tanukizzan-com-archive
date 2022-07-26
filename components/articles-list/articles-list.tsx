@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import type { Article } from '../../types/article'
-import Date from '../../components/Date';
+import Date from '../Date';
 import { BiTime } from 'react-icons/bi';
 import { BiCategory } from 'react-icons/bi';
 import styles from '../../styles/Home.module.css'

@@ -3,14 +3,19 @@ import Link from 'next/link'
 export default function Footer() {
   return (
     <footer className="body-font w-4/5 mx-auto">
-      <div className="mx-auto my-8 flex flex-wrap flex-col md:flex-row items-center justify-evenly">
+      <div className="mx-auto my-8 flex flex-wrap flex-col md:flex-row items-center justify-around">
         <Link href={'/'} passHref>
-          <a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-            <span className=" text-xl">tanukizzan.com</span>
+          <a className="flex items-center text-base">
+            <span className="text-lg">Home</span>
           </a>
         </Link>
-        <nav className="flex flex-wrap items-center text-base">
-          <p>&copy; 2022 tanukizzan</p>
+        <Link href={'/privacy-policy'} passHref>
+          <a className="flex items-center text-base">
+            <span className="text-lg">Privacy Policy</span>
+          </a>
+        </Link>
+        <nav className="flex items-center text-base">
+          <p className="text-lg">&copy; 2022 tanukizzan</p>
         </nav>
       </div>
     </footer>

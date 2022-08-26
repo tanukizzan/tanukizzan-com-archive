@@ -1,58 +1,334 @@
+.pad {
+  position: relative;
+  background-color: black;
+  border-radius: 32px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4) ;
+  border: solid 20px #000000;
+  width: 60%;
+  max-width: 700px;
+  margin-top: 6.5rem;
+}
 .padImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 3 / 2;
+  border-radius: 16px;
   filter: brightness(.9);
 }
-.topText {
+.padBtn {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateY(-50%) translateX(-50%);
+  top: -24px;
+  left: 25px;
+  width: 30px;
+  height: 4px;
+  background-color: black;
+}
+.padBtn::before {
+  position: absolute;
+  content: "";
+  top: 35px;
+  left: -49px;
+  width: 5px;
+  height: 58px;
+  background-color: black;
+}
+.padBtn::after {
+  position: absolute;
+  content: "";
+  left: 40px;
+  width: 30px;
+  height: 4px;
+  background-color: black;
+}
+.topText {
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
   width: 72%;
   max-width: 20rem;
+  height: 11rem;
   text-align: center;
   background-color: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(20px) saturate(180%);
   border-radius: 16px;
+  animation: ShowModal .3s ease-in-out forwards;
 }
-.topText h1 {
+@keyframes ShowModal {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.topTextContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  width: 100%;
+  margin: auto;
+}
+.topTextContent h1 {
+  display: flex;
+  align-items: center;
   font-weight: bold;
   font-size: 2rem;
   padding: 1.5rem 0.5rem 0.5rem 0.5rem;
   line-height: 1.2;
 }
-.topText a {
+.topTextContent p {
+  margin-bottom: 1rem;
+}
+.topTextContent button {
   display: block;
-  margin-top: 1rem;
   padding: 1rem 0 ;
-  border-top: 1px solid rgba(0, 0, 0, 0.4);
+  border-top: 1px solid rgba(0, 0, 0, 0.3);
   font-weight: 600;
   width: 100%;
 }
-.card {
-  cursor: pointer;
-}
-.cardImg {
-  position: relative;
-  border-radius: 12px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-  cursor: pointer;
-  background-color: #000000;
-  transition: .3s;
-}
-.card:hover .cardImg {
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
-}
-.cardImg img {
+.topTextContent button a {
+  display: block;
   width: 100%;
-  object-fit: cover;
-  aspect-ratio: 3 / 2;
-  border-radius: 6px;
 }
 
-@media screen and (max-width: 520px) {
-  .padImg {
-    aspect-ratio: 5 / 4 !important;
+.profile {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  background-color: #fcfcfc;
+  overflow: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  animation: ShowModal2 .3s ease-in-out forwards;
+}
+.profile::-webkit-scrollbar {
+  display: none;
+}
+@keyframes ShowModal2 {
+  0% {
+    opacity: 0;
   }
-  .topText h1 {
+  20% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.profileContent {
+  overflow: hidden;
+  padding: 2rem 3rem;
+}
+.profileContent .profileTitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem auto;
+}
+.profileContent .profileTitle img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50px;
+}
+.profileContent .profileTitle h2 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-left: 0.75rem;
+}
+.profileContent h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 1rem 0 0.5rem 0;
+}
+.profileContent p {
+  display: flex;
+  align-items: center;
+  margin: 0.5rem 0;
+  line-height: 1.7;
+  font-size: 1rem;
+}
+.profileContent > img {
+  object-fit: cover;
+  aspect-ratio: 3 / 2;
+  border-radius: 16px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  margin: 1rem 0 1.5rem 0;
+}
+.profile .modalCloseTop {
+  position: absolute;
+  font-size: 1.5rem;
+  top: 1rem;
+  left: 1rem;
+  transition: .3s;
+}
+.profile .modalCloseBottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem auto 0 auto;
+  background-color: #333333;
+  color: #ffffff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  font-weight: 400;
+  transition: .3s;
+}
+.profile .modalCloseBottom .closeMark, .profile .modalCloseTop .closeMark {
+  transition: .3s;
+}
+.profile .modalCloseBottom:hover .closeMark, .profile .modalCloseTop:hover .closeMark {
+  transform: rotateZ(90deg);
+  transition: .3s;
+}
+
+.iconBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: .3s;
+  height: 4.4rem;
+  overflow: hidden;
+}
+.iconBtn img {
+  width: 2rem;
+  height: 2rem;
+  margin: 1.2rem;
+  transition: .3s;
+}
+.iconBtn:hover img {
+  transform: rotateZ(360deg);
+  transition: .3s;
+}
+.GitHub {background-color: #333333; color: #ffffff;}
+.Qiita {background-color: #ffffff; color: #111111;}
+.Twitter {background-color: #1da1f2; color: #ffffff;}
+.YouTube {background-color: #ff0000; color: #ffffff;}
+.SoundCloud {background-color: #ff8800; color: #ffffff;}
+.note {background-color: #41C9B4; color: #ffffff;}
+.note img {
+  width: 4.4rem;
+  height: 4.4rem;
+  margin: 0 !important;
+}
+
+.works {
+  cursor: pointer;
+}
+.worksImg {
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+.worksImg img {
+  transition: .3s;
+}
+.worksImg:hover img {
+  transform: scale(1.05, 1.05);
+}
+.worksImg {
+  overflow: hidden;
+}
+.works p {
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+@media screen and (min-width: 520px) and (max-width: 960px) {
+  .pad {
+    width: 90%;
+    max-width: 600px;
+  }
+}
+@media screen and (max-width: 520px) {
+  .pad {
+    margin-top: 2.5rem;
+    border: 10px solid #000000;
+    width: 90%;
+  }
+  .pad::before {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 20px;
+    top: 10px;
+    left: 40%;
+    border-radius: 10px;
+    background-color: #000000;
+    z-index: 10;
+  }
+  .pad::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 10px;
+    left: 54%;
+    border-radius: 10px;
+    background-color: #000000;
+    z-index: 11;
+  }
+  .padBtn, .padBtn::before, .padBtn::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+  }
+  .padImg {
+    aspect-ratio: 9 / 19.5 !important;
+    border-radius: 26px !important;
+    display: flex;
+    overflow: hidden;
+  }
+  .topText {
+    width: 85%;
+  }
+  .topTextContent h1 {
     font-size: 1.8rem;
+  }
+  .profile {
+    border-radius: 26px !important;
+  }
+  .profileContent {
+    padding: 2rem 1.5rem;
+  }
+  .profile .profileTitle {
+    margin-top: 2rem;
+  }
+  .profile .modalCloseTop {
+    top: 2rem;
+  }
+}
+@media screen and (max-width: 300px) {
+  .topText {
+    width: 95%;
+  }
+  .pad::before {
+    left: 37%;
+  }
+  .pad::after {
+    left: 57%;
   }
 }

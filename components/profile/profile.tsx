@@ -1,59 +1,62 @@
+import Link from 'next/link'
+import styles from '../../styles/Home.module.css'
+
 export type Link = {
   title: string
   url: string
+  icon: string
 }
 
 export const linkBtn: Link[] = [
   {
     title: 'GitHub',
     url: 'https://github.com/tanukizzan',
+    icon: '/images/icons/github.svg',
   },
   {
     title: 'Qiita',
-    url: 'https://qiita.com/Tanukizzan'
+    url: 'https://qiita.com/Tanukizzan',
+    icon: '/images/icons/qiita.png',
   },
   {
     title: 'Twitter',
-    url: 'https://twitter.com/tanukizzan'
+    url: 'https://twitter.com/tanukizzan',
+    icon: '/images/icons/twitter.svg',
   },
   {
     title: 'YouTube',
-    url: 'https://www.youtube.com/channel/UCb4HwLN4NNHs3sL7FGVLbOw'
+    url: 'https://www.youtube.com/channel/UCb4HwLN4NNHs3sL7FGVLbOw',
+    icon: '/images/icons/youtube.svg',
   },
   {
     title: 'SoundCloud',
-    url: 'https://soundcloud.com/tanukizzan'
+    url: 'https://soundcloud.com/tanukizzan',
+    icon: '/images/icons/soundcloud.svg',
   },
   {
     title: 'note',
-    url: 'https://note.com/tanukizzan'
+    url: 'https://note.com/tanukizzan',
+    icon: '/images/icons/note.svg',
   },
 ]
 
 export default function Profile() {
   return (
     <div className="profile">
-      <section className="body-font">
-        <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
-          <div className="lg:flex-grow md:w-1/2 lg:pr-20 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-            <h2 className="title-font sm:text-4xl text-3xl mb-4 font-medium">I'm tanukizzan.
-            </h2>
-            <p className="paragraph">たぬきっつぁんです。ブロガー的なプログラマー的な人です。</p>
-            <p className="paragraph">Skills: HTML / CSS / JavaScript / Next.js</p>
-            <nav className="flex flex-wrap items-center m-auto lg:m-0">
-              {
-                linkBtn.map((link: Link) => (
-                  <a href={link.url} className="paragraph text-blue-500 hover:underline inline-block relative pr-8 last:pr-0 last-of-type:before:hidden before:absolute before:top-1/2 before:right-3 before:-translate-y-1/2 before:w-1 before:h-1 before:bg-gray-300 before:rounded-full" key={link.title}>{link.title}</a>
-                ))
-              }
-            </nav>
-          </div>
-          <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-            <img className="object-cover object-center rounded shadow-xl" alt="hero" src="/images/gadgets.jpg" />
-          </div>
-        </div>
-      </section>
+      <h2 className="home-h2">
+        Links
+      </h2>
+      <div className={`mx-auto my-8 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-6 gap-5`}>
+        {
+          linkBtn.map((link: Link) => (
+            <Link href={link.url} key={link.title}>
+              <div className={`${styles.iconBtn} ${styles[link.title]}`}>
+                <img src={link.icon} alt={link.title} />
+              </div>
+            </Link>
+          ))
+        }
+      </div>
     </div>
-
   )
 }

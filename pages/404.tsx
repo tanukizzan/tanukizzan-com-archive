@@ -8,13 +8,15 @@ export default function Custom404() {
         <title>404 Not Found | tanukizzan</title>
         <meta name="robots" content="noindex" />
       </Head>
-      <div className="pad w-3/4 max-w-3xl mx-auto mb-24">
-        <div className="padBtn"></div>
-        <img alt="hero" src="/images/404sakura.jpg" className={styles.padImg} />
+      <div className={`${styles.pad} w-3/4 max-w-3xl m-auto`}>
+        <div className={styles.padBtn}></div>
+        <img alt="hero" src="/images/404sakura.webp" className={styles.padImg} />
         <div className={styles.topText}>
-          <h1>404 Not Found</h1>
-          <p className="px-4">お探しのページは見つかりませんでした。</p>
-          <a href='/' className="text-blue-600">ホームに戻る</a>
+          <div className={styles.topTextContent}>
+            <h1>404 Not Found</h1>
+            <p>ページは存在しません。</p>
+            <button className="text-blue-600"><a href="/">ホームに戻る</a></button>
+          </div>
         </div>
       </div>
     </>

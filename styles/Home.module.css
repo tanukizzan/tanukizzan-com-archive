@@ -29,7 +29,7 @@
   content: "";
   top: 35px;
   left: -49px;
-  width: 4px;
+  width: 5px;
   height: 58px;
   background-color: black;
 }
@@ -96,6 +96,10 @@
   padding: 1rem 0 ;
   border-top: 1px solid rgba(0, 0, 0, 0.3);
   font-weight: 600;
+  width: 100%;
+}
+.topTextContent button a {
+  display: block;
   width: 100%;
 }
 

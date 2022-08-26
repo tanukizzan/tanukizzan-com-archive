@@ -1,15 +1,18 @@
+import React, { useState } from "react";
 import styles from '../../styles/Home.module.css'
+import Modal from './modal'
+
+export type Props = {
+  showFlag: boolean
+}
 
 export default function Top() {
+  const [showModal, setShowModal] = useState(false);
   return (
-    <div className="pad w-3/4 max-w-3xl m-auto">
-      <div className="padBtn"></div>
-      <img alt="hero" src="/images/gadgets.jpg" className={styles.padImg} />
-      <div className={styles.topText}>
-        <h1>Welcome to tanukizzan.com!</h1>
-        <p>Technology / Gadget</p>
-        <a href='https://app.tanukizzan.com' className="text-blue-600">About Me</a>
-      </div>
+    <div className={`${styles.pad} w-3/4 max-w-3xl m-auto`}>
+      <div className={styles.padBtn}></div>
+      <img alt="hero" src="/images/gadgets.webp" className={styles.padImg} />
+      <Modal showFlag={showModal} setShowModal={setShowModal} />
     </div>
   )
 }

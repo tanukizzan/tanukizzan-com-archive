@@ -10,7 +10,7 @@ export default function Custom404() {
       </Head>
       <div className="pad w-3/4 max-w-3xl mx-auto mb-24">
         <div className="padBtn"></div>
-        <img alt="hero" src="/images/404sakura.jpg" className={styles.padImg} />
+        <img alt="hero" src="/images/404sakura.webp" className={styles.padImg} />
         <div className={styles.topText}>
           <h1>404 Not Found</h1>
           <p className="px-4">お探しのページは見つかりませんでした。</p>

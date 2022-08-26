@@ -46,13 +46,12 @@ export default function Profile() {
       <h2 className="home-h2">
         Links
       </h2>
-      <div className={`mx-auto my-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-5`}>
+      <div className={`mx-auto my-8 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-6 gap-5`}>
         {
           linkBtn.map((link: Link) => (
             <Link href={link.url} key={link.title}>
               <div className={`${styles.iconBtn} ${styles[link.title]}`}>
                 <img src={link.icon} alt={link.title} />
-                <p>{link.title}</p>
               </div>
             </Link>
           ))

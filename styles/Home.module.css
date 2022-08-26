@@ -198,22 +198,19 @@
 
 .iconBtn {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   transition: .3s;
-  height: 4rem;
+  height: 4.4rem;
   overflow: hidden;
-}
-.iconBtn p {
-  margin: 1rem 1rem 1rem auto;
 }
 .iconBtn img {
   width: 2rem;
   height: 2rem;
-  margin: 1rem;
+  margin: 1.2rem;
   transition: .3s;
 }
 .iconBtn:hover img {
@@ -227,8 +224,8 @@
 .SoundCloud {background-color: #ff8800; color: #ffffff;}
 .note {background-color: #41C9B4; color: #ffffff;}
 .note img {
-  width: 4rem;
-  height: 4rem;
+  width: 4.4rem;
+  height: 4.4rem;
   margin: 0 !important;
 }
 
@@ -237,7 +234,7 @@
 }
 .worksImg {
   border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 .worksImg img {
   transition: .3s;
@@ -300,6 +297,9 @@
     border-radius: 26px !important;
     display: flex;
     overflow: hidden;
+  }
+  .topText {
+    width: 85%;
   }
   .topTextContent h1 {
     font-size: 1.8rem;

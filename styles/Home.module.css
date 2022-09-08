@@ -271,24 +271,14 @@
   .pad::before {
     content: "";
     position: absolute;
-    width: 40px;
-    height: 20px;
+    width: 80px;
+    height: 25px;
     top: 10px;
-    left: 40%;
-    border-radius: 10px;
+    left: 50%;
+    transform : translateX(-50%);
+    border-radius: 30px;
     background-color: #000000;
     z-index: 10;
-  }
-  .pad::after {
-    content: "";
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    top: 10px;
-    left: 54%;
-    border-radius: 10px;
-    background-color: #000000;
-    z-index: 11;
   }
   .padBtn, .padBtn::before, .padBtn::after {
     position: absolute;

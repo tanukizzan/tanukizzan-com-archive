@@ -11,7 +11,7 @@ export default function Top() {
   return (
     <div className={`${styles.pad} w-3/4 max-w-3xl m-auto`}>
       <div className={styles.padBtn}></div>
-      <img alt="hero" src="/images/gadgets.webp" className={styles.padImg} />
+      <img alt="hero" src="/images/skytree.webp" className={styles.padImg} />
       <Modal showFlag={showModal} setShowModal={setShowModal} />
     </div>
   )

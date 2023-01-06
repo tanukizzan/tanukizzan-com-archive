@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Top from '../components/top/top'
 import Profile from '../components/profile/profile'
+import Feature from '../components/feature/feature'
 import Works from '../components/works/works'
 
 export default function Home() {
@@ -21,6 +22,7 @@ export default function Home() {
       <Top />
       <main className="w-5/6 mx-auto flex-grow">
         <Profile />
+        <Feature />
         <Works />
       </main>
     </>

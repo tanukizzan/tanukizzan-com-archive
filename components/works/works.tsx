@@ -113,7 +113,7 @@ export default function Works() {
                 <div className={styles.worksImg}>
                   <img src={item.image} alt={item.title} width="512" height="512" loading="lazy" />
                 </div>
-                <p className='font-bold text-xl'>{item.title}</p>
+                <p className='font-bold text-xl text-center'>{item.title}</p>
               </div>
             </Link>
           ))

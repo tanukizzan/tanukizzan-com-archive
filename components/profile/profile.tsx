@@ -34,6 +34,11 @@ export const linkBtn: Link[] = [
     icon: '/images/icons/soundcloud.svg',
   },
   {
+    title: 'Blog',
+    url: 'https://blog.tanukizzan.com',
+    icon: '/images/icons/blogger.svg',
+  },
+  {
     title: 'note',
     url: 'https://note.com/tanukizzan',
     icon: '/images/icons/note.svg',
@@ -46,7 +51,7 @@ export default function Profile() {
       <h2 className="home-h2">
         Links
       </h2>
-      <div className={`mx-auto my-8 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-6 gap-5`}>
+      <div className={`mx-auto my-8 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 xl:grid-cols-7 gap-5`}>
         {
           linkBtn.map((link: Link) => (
             <Link href={link.url} key={link.title}>

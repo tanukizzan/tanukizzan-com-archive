@@ -26,7 +26,7 @@ export default function Modal(props: Props) {
             <p>　たぬきっつぁんと申します。生まれは青森ですが、小6という中途半端な年齢で東京に来てしまったので出身を聞かれるとちょっと戸惑います。現在文系大学生です。PC版トップのデザインは自分がガジェット好きなのでiPadをモチーフにしています。</p>
             <p>　趣味は写真を撮ること（風景をよく撮ります）、文章を書くこと（ブログにガジェットのことなどを書いてます）、ゲームをすること（Switchのゲームをよくやります）、音楽を聴くこと（J-Popやボカロをよく聴きます）などです。</p>
             <p>　プログラミングは高校に入ってから本格的に始めました。HTMLとCSSとJavaScriptを使ったWebサイトを作ることが多いですが、たまにUnityを使うこともあります。最近Next.jsとFlutterの勉強も始めました。このサイトもNext.jsで作成しています。</p>
-            <h3>Skills</h3>
+            <h3>Skills（～2022）</h3>
             <p><FaStar/><FaStar/><FaStar className="mr-1"/>HTML</p>
             <p><FaStar/><FaStar/><FaStar className="mr-1"/>CSS</p>
             <p><FaStar/><FaStar className="mr-1"/>JavaScript</p>
